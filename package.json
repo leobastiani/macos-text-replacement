@@ -1,0 +1,23 @@
+{
+  "name": "macos-text-replacement",
+  "scripts": {
+    "build": "mkdir -p dist && yarn --silent ts-node-esm index.ts > 'dist/Text Substitutions.plist'"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Leonardo Guarnieri de Bastiani <leogbastiani@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "async-fns": "^1.1.2",
+    "lodash": "^4.17.21",
+    "node-fetch": "^3.3.0",
+    "remove-accents": "^0.4.4",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.14.1",
+    "typescript": "^4.9.5"
+  }
+}
