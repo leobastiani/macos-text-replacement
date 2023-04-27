@@ -5,7 +5,9 @@ import accents from "remove-accents";
 
 (async () => {
   const resp = await fetch("https://www.ime.usp.br/~pf/dicios/br-utf8.txt");
-  const words = (await resp.text()).split(`\n`);
+  const words = (await resp.text())
+    .split(`\n`)
+    .map((word) => word.trim().toLocaleLowerCase());
   assert(words.pop() === "");
   console.log(`name: portuguese-auto-accents
 parent: default
