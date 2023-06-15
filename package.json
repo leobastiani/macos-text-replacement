@@ -1,7 +1,7 @@
 {
   "name": "portuguese-auto-accents",
   "scripts": {
-    "build": "yarn --silent ts-node-esm index.ts > \"$(espanso path config)/match/portuguese-auto-accents.yml\""
+    "build": "./download-wordlist.sh && yarn --silent ts-node-esm index.ts > \"$(espanso path config)/match/portuguese-auto-accents.yml\""
   },
   "version": "1.0.0",
   "main": "index.js",

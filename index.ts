@@ -1,19 +1,19 @@
-import assert from "assert";
+import { readFile } from "fs/promises";
 import _ from "lodash";
-import fetch from "node-fetch";
 import accents from "remove-accents";
 
 (async () => {
-  const resp = await fetch("https://www.ime.usp.br/~pf/dicios/br-utf8.txt");
-  const words = (await resp.text())
+  const words = _.chain(await readFile("./wordlist-ao-latest.txt", "latin1"))
     .split(`\n`)
-    .map((word) => word.trim().toLocaleLowerCase());
-  assert(words.pop() === "");
+    .filter((word) => Boolean(word) && !word.includes("-"))
+    .map((word) => word.trim().toLocaleLowerCase())
+    .value();
   console.log(`name: portuguese-auto-accents
 parent: default
 
 matches:`);
   const wordsMap = _.groupBy(words, (word) => accents.remove(word));
+
   for (const pureWord in wordsMap) {
     if (wordsMap[pureWord].length !== 1) {
       continue;
