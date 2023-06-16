@@ -16,6 +16,10 @@ matches:`);
 
   // exceptions
   wordsMap["amanha"] = ["amanhã"];
+  // remove some words to write English
+  delete wordsMap.so;
+
+  let qnt = 0;
 
   for (const pureWord in wordsMap) {
     if (wordsMap[pureWord].length !== 1) {
@@ -28,5 +32,7 @@ matches:`);
     replace: ${wordsMap[pureWord][0].toLocaleLowerCase()}
     propagate_case: true
     word: true`);
+    qnt++;
   }
+  process.stderr.write(`words added ${qnt}\n`);
 })();
