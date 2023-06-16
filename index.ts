@@ -14,6 +14,9 @@ parent: default
 matches:`);
   const wordsMap = _.groupBy(words, (word) => accents.remove(word));
 
+  // exceptions
+  wordsMap["amanha"] = ["amanhã"];
+
   for (const pureWord in wordsMap) {
     if (wordsMap[pureWord].length !== 1) {
       continue;
