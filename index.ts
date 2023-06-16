@@ -18,6 +18,7 @@ matches:`);
   wordsMap["amanha"] = ["amanhã"];
   // remove some words to write English
   delete wordsMap.so;
+  delete wordsMap.macos; // because of MacOS
 
   let qnt = 0;
 
