@@ -17,6 +17,7 @@ matches:`);
   // exceptions
   wordsMap["amanha"] = ["amanhã"];
   // remove some words to write English
+  delete wordsMap.has;
   delete wordsMap.index;
   delete wordsMap.macos; // because of MacOS
   delete wordsMap.so;
