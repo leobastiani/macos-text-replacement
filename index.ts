@@ -21,6 +21,7 @@ matches:`);
   delete wordsMap.has;
   delete wordsMap.index;
   delete wordsMap.macos; // because of MacOS
+  delete wordsMap.pros; // para + os
   delete wordsMap.so;
   delete wordsMap.video;
 
