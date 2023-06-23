@@ -16,6 +16,7 @@ matches:`);
 
   // exceptions
   wordsMap["amanha"] = ["amanhã"];
+  wordsMap["sao"] = ["são"];
   // remove some words to write English
   delete wordsMap.audio;
   delete wordsMap.has;
