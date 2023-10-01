@@ -18,12 +18,14 @@ matches:`);
   wordsMap["amanha"] = ["amanhã"];
   wordsMap["mao"] = ["mão"];
   wordsMap["sao"] = ["são"];
+  wordsMap["tao"] = ["tão"];
   // remove some words to write English
   delete wordsMap.audio;
   delete wordsMap.has;
   delete wordsMap.index;
   delete wordsMap.macos; // because of MacOS
   delete wordsMap.pros; // para + os
+  delete wordsMap.senior;
   delete wordsMap.so;
   delete wordsMap.video;
 
